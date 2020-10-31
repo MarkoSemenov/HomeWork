@@ -1,6 +1,6 @@
 public class Lesson2 {
 
-    public static void array0101() {
+    public static void oneZero() {
         int[] array = {1, 0, 0, 1, 0, 1, 0, 0};
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) {
@@ -66,10 +66,35 @@ public class Lesson2 {
         System.out.println();
     }
 
+    public static boolean trueOrNot() {
 
+        int[] array = {1, 6, 5, 4, 2, 2, 2, 8};
+
+        int sum;
+        int sumRigth;
+
+        for (int i=0; i < array.length-1;i++) {
+            sum = array[i] + array[i+1];
+
+            for (int j = array.length - 1; j > array.length /2; j--) {
+                if (sum == array[j]){
+                    return true;
+                } else {
+                    sumRigth = array[j] + array[j - 1];
+                }
+                if (sum == sumRigth) {
+                    return true;
+                }
+
+            }
+
+        }
+        return false;
+
+    }
 
     public static void main(String[] args) {
-        array0101();
+        oneZero();
         System.out.println();
         arFill();
         System.out.println();
@@ -77,6 +102,8 @@ public class Lesson2 {
         System.out.println();
         doubleArr();
         lessOrMore();
+
+
     }
 
 }
