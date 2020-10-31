@@ -93,6 +93,28 @@ public class Lesson2 {
 
     }
 
+    public static void sortArray() {
+
+        int[] array = {1,2,3,4,5,6};
+        int n = 2;
+        int safe;
+
+        if (n<0){
+            n=-n;
+        }
+
+        for (int i = array.length - 1; i > n - 1; i--) {
+            safe = array[i];
+            array[i] = array[i - n];
+            array[i - n] = safe;
+        }
+
+        for (int j : array) {
+            System.out.print(j);
+        }
+
+    }
+
     public static void main(String[] args) {
         oneZero();
         System.out.println();
@@ -103,6 +125,7 @@ public class Lesson2 {
         doubleArr();
         lessOrMore();
         System.out.println(trueOrNot());
+        sortArray();
 
     }
 
