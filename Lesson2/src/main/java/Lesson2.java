@@ -102,7 +102,7 @@ public class Lesson2 {
         System.out.println();
         doubleArr();
         lessOrMore();
-
+        System.out.println(trueOrNot());
 
     }
 
