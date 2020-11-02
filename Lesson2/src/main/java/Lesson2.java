@@ -68,7 +68,7 @@ public class Lesson2 {
 
     public static boolean trueOrNot() {
 
-        int[] array = {1, 6, 5, 4, 2, 2, 2, 8};
+        int[] array = {1, 6, 5, 4, 2, 2, 2, 8,9};
 
         int sum;
         int sumRigth;
@@ -97,16 +97,16 @@ public class Lesson2 {
 
         int[] array = {1,2,3,4,5,6};
         int n = 2;
-        int safe;
+        int save;
 
         if (n<0){
             n=-n;
         }
 
         for (int i = array.length - 1; i > n - 1; i--) {
-            safe = array[i];
+            save = array[i];
             array[i] = array[i - n];
-            array[i - n] = safe;
+            array[i - n] = save;
         }
 
         for (int j : array) {
