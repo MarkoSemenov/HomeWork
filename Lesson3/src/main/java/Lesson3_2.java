@@ -1,6 +1,6 @@
-import java.util.Scanner;
+    import java.util.Scanner;
 
-public class Lesson3_2 {
+    public class Lesson3_2 {
 
         public static Scanner scanner = new Scanner(System.in);
 
@@ -11,8 +11,8 @@ public class Lesson3_2 {
         public static void guessWord() {
 
             String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry",
-                    "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear",
-                    "pepper", "pineapple", "pumpkin", "potato"};
+                "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut", "pear",
+                "pepper", "pineapple", "pumpkin", "potato"};
 
             int randomNumber = (int) (Math.random() * words.length);
             String word = words[randomNumber];
@@ -28,19 +28,17 @@ public class Lesson3_2 {
                     break;
 
                 } else {
-
                     for (int i = 0; i < userAnswer.length() && i < word.length(); i++) {
                         if (userAnswer.charAt(i) == word.charAt(i)) {
-                            System.out.print(word.charAt(i));
-
-                        } else System.out.print("#");
+                        System.out.print(word.charAt(i));
+                        } else System.out.print("*");
                     }
                 }
+
                 System.out.println();
                 System.out.println("Длина слова " + word.length() + " букв(-ы)");
             }
 
         }
 
-}
-
+    }
