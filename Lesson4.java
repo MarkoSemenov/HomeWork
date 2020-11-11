@@ -182,7 +182,7 @@ public class Lesson4 {
         //Проверяем диагонали
         checkMapDiagonalLeftToRight(0,1, FIELD_SIZE-1, token);
         checkMapDiagonalLeftToRight(1,0, FIELD_SIZE, token);
-        checkMapDiagonalLeftToRight(0,0, FIELD_SIZE, token);
+        checkMapDiagonalLeftToRight(0,0, FIELD_SIZE-1, token);
 
         checkMapDiagonalRightToLeft(5,1, 4, token);
         checkMapDiagonalRightToLeft(4,0, 3, token);
