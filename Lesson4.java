@@ -144,7 +144,7 @@ public class Lesson4 {
     }
 
 
-    //Метод - кто победит
+    //Метод - кто победил
     public static boolean whoIsWin(char token) {
 
         for (int i = 0; i < FIELD_SIZE; i++) {
@@ -180,22 +180,22 @@ public class Lesson4 {
         }
 
         //Проверяем диагонали
-        checkMapDiagonalLeftToRight(0,1, token);
-        checkMapDiagonalLeftToRight(1,0, token);
-        checkMapDiagonalLeftToRight(0,0, token);
+        checkMapDiagonalLeftToRight(0,1, FIELD_SIZE-1, token);
+        checkMapDiagonalLeftToRight(1,0, FIELD_SIZE, token);
+        checkMapDiagonalLeftToRight(0,0, FIELD_SIZE, token);
 
-        checkMapDiagonalRightToLeft(4,0, token);
-        checkMapDiagonalRightToLeft(3,0, token);
-        checkMapDiagonalRightToLeft(4,1, token);
+        checkMapDiagonalRightToLeft(5,1, 4, token);
+        checkMapDiagonalRightToLeft(4,0, 3, token);
+        checkMapDiagonalRightToLeft(5,0, 4, token);
 
         return trueOrNot;
 
 
     }
 
-    public static void checkMapDiagonalRightToLeft(int arLength, int j, char token){
+    public static void checkMapDiagonalRightToLeft(int arLength, int j, int i, char token){
         win = 0;
-        for (int i = arLength; i >= 0; i--) {
+        for (j=j; j < arLength; j++) {
             if (map[j][i] == token) {
 
                 win++;
@@ -209,15 +209,15 @@ public class Lesson4 {
                 win = 0;
             }
 
-            if (j < arLength) {
-                j++;
+            if (i > 0) {
+                i--;
             }
         }
     }
 
-    public static void checkMapDiagonalLeftToRight (int xX, int j, char token){
+    public static void checkMapDiagonalLeftToRight (int i, int j, int arLength, char token){
         win = 0;
-        for (int i = xX; i <= FIELD_SIZE-1; i++) {
+        for (i = i; i < arLength; i++) {
 
             if (map[j][i] == token) {
 
