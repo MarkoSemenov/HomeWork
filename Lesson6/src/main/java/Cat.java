@@ -2,10 +2,12 @@ public class Cat extends Animal{
     private int swim;
     private int jump;
     private int run;
+    public static int i;
 
 
     public Cat(String name, String color, int age) {
         super(name, color, age);
+        i++;
         this.swim = 0;
         this.jump = 2;
         this.run = 200;
@@ -47,7 +49,7 @@ public class Cat extends Animal{
     }
 
     @Override
-    boolean animalJump(int jump){
+    boolean animalJump(double jump){
         if (jump > this.jump){
             System.out.println(this.getName() + " не может пригнуть выше " + this.jump + " метров");
             return false;
@@ -58,7 +60,7 @@ public class Cat extends Animal{
 
     @Override
     boolean animalSwim(int swim){
-        if (swim > this.swim){
+        if (swim >= this.swim){
             System.out.println(this.getName() + " не умеет плавать");
             return false;
         }
@@ -66,6 +68,8 @@ public class Cat extends Animal{
         return super.animalSwim(swim);
     }
 
-
+    public static void howManyCats (){
+        System.out.println("Создано котов: " + i);
+    }
 
 }

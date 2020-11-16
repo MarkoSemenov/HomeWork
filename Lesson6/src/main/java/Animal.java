@@ -3,13 +3,14 @@ public class Animal {
     private String name;
     private String color;
     private int age;
+    private static int i;
 
 
     public Animal(String name, String color, int age) {
         this.name = name;
         this.color = color;
         this.age = age;
-
+        i++;
     }
 
     boolean animalRun (int run){
@@ -20,7 +21,7 @@ public class Animal {
 
     }
 
-    boolean animalJump (int jump){
+    boolean animalJump (double jump){
         if (jump > 0) {
             System.out.println(name + " прыгнул на " + jump + " метров");
             return true;
@@ -29,11 +30,10 @@ public class Animal {
     }
 
     boolean animalSwim (int swim){
-        if (swim == 0){
-            System.out.println(name + " не умеет плавать");
-            return false;
-        } else System.out.println(name + " проплыл " + swim + " метров");
-        return true;
+        if (swim > 0){
+            System.out.println(name + " проплыл " + swim + " метров");
+            return true;
+        } else return false;
     }
 
 
@@ -60,4 +60,9 @@ public class Animal {
     public int getAge() {
         return age;
     }
+
+    public static void howManyAnimals(){
+        System.out.println("Всего создано животных: " + i);
+    }
+
 }
