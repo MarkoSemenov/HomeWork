@@ -23,8 +23,8 @@ public class Lesson7 {
         cat3.catEat(plate);
 
 
-        for (int i = 0; i < cats.length; i++) {
-            cats[i].isSatiety();
+        for (Cat i : cats) {
+            i.isSatiety();
         }
 
         System.out.println("Объем еды в тарелке: " + plate.getVolume());
