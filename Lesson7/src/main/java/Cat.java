@@ -40,7 +40,7 @@ public class Cat {
             plate.volumeReduction(appetite);
             this.satiety = true;
             System.out.println(this.name + " съел " + this.appetite + " ед. еды. ");
-            System.out.println(this.name + " сыт: " + this.satiety);
+            //System.out.println(this.name + " сыт: " + this.satiety);
         } else System.out.println(this.name + " не ест т.к. в тарелке не достаточно еды. Добавьте еды в тарелку!");
 
 
